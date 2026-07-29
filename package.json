@@ -1,0 +1,13 @@
+{
+  "name": "uk-visa-compliance-db",
+  "version": "1.0.0",
+  "private": true,
+  "description": "DB layer: schema migrations and RLS isolation tests for uk_visa_compliance. Deliberately its own standalone project, not part of api-service - the database schema has its own lifecycle and shouldn't be versioned inside whichever service happens to run the migration command.",
+  "scripts": {
+    "migrate": "node scripts/migrate.js",
+    "test:rls": "node scripts/test-rls-isolation.js"
+  },
+  "dependencies": {
+    "pg": "^8.11.3"
+  }
+}
