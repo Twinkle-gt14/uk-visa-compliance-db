@@ -11,6 +11,6 @@ ALTER TABLE reference.position RENAME TO role;
 
 ALTER TABLE reference.role RENAME CONSTRAINT uq_position_tenant_name TO uq_role_tenant_name;
 
-ALTER INDEX idx_position_tenant RENAME TO idx_role_tenant;
+ALTER INDEX reference.idx_position_tenant RENAME TO idx_role_tenant;
 
 ALTER POLICY position_tenant_isolation ON reference.role RENAME TO role_tenant_isolation;
